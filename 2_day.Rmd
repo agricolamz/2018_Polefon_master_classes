@@ -1,0 +1,12 @@
+---
+title: "2 день"
+author: "[Г. Мороз](mailto:agricolamz@gmail.com) <br> Presentation link:"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, comment=NA, fig.width=8, fig.height=3.4)
+library(shiny)
+```
+

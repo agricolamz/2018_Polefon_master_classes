@@ -1,0 +1,17 @@
+---
+title: "Статистические методы в фонетике"
+author: "[Г. А. Мороз](mailto:agricolamz@gmail.com)"
+output:
+  html_document:
+    toc: false
+---
+
+```{r, message=FALSE, echo=FALSE}
+knitr::opts_chunk$set(message = FALSE, comment=NA)
+```
+
+Prerequisites:
+
+* установите [R](https://cran.r-project.org/)
+* установите [RStudio Desktop](http://www.rstudio.com/download) (это не обязательно, но в RStudio)
+* если не хочется ничего устанавливать, попробуйте [RStudio Cloud](https://rstudio.cloud/), по началу он достаточно медленный, но потом ведет себя как обычный RStudio.
