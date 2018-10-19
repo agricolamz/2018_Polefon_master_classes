@@ -17,6 +17,7 @@ output:
     highlight: pygments
     toc: yes
     toc_depth: 3
+    number_sections: true
     toc_float: yes
     smooth_scroll: false
     df_print: paged

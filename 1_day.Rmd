@@ -1,5 +1,5 @@
 ---
-title: "1 день"
+title: "Первый день"
 author: "[Г. Мороз](mailto:agricolamz@gmail.com) <br> Presentation link:"
 output_df: paged
 editor_options: 
@@ -10,11 +10,13 @@ editor_options:
 knitr::opts_chunk$set(message = FALSE, warning = FALSE, comment=NA, fig.width=8, fig.height=3.4, echo =FALSE)
 library(tidyverse)
 read_csv("/home/agricolamz/work/materials/2018_Abaza_expedition/sound/list.csv") %>% 
-  filter(str_detect(word, "[сзцдт][ыа]$")) ->
+  filter(str_detect(word, "[сзцдт][ыа]$"),
+         word != "ца",
+         word != "цIда") ->
   word_list
 ```
 
-## Данные
+# Данные
 
 * 1 носитль абазинского языка произносил 
 * односложные слова 
@@ -34,18 +36,58 @@ word_list %>%
   arrange(word)
 ```
 
-## Praat
+Данные доступны [здесь](https://github.com/agricolamz/2018_Polefon_master_classes/blob/master/data/day_1_sound.zip?raw=true).
 
-### Работа с файлами
+## Исследовательские вопросы
 
-### Praat скрипты
+1. Правда ли, что **a** в среднем длиннее **ə**?
+2. Верно ли это для всех произнесений (первое, второе, третье, carrier phrase)?
 
-## Введение в R
+# Praat
 
-### Переменные
+## Работа с файлами
 
-### Датафрейм
+```{r, fig.cap="1. Чтение файлов в Praat."}
+knitr::include_graphics(rep("images/01.reading_files.gif"))
+```
 
-### Считывание файлов в R
+```{r, fig.cap="2. Полученные файлы можно соединить в один, сохраняя названия."}
+knitr::include_graphics(rep("images/02.concatenate_files.gif"))
+```
 
-### Визуализация данных
+```{r, fig.cap="3. Полученный звук можно автоматически разделит по паузам."}
+knitr::include_graphics(rep("images/03.annotate.gif"))
+```
+
+```{r, fig.cap="4. Полученные аннотации можно соединить."}
+knitr::include_graphics(rep("images/04.merge_annotation.gif"))
+```
+
+Используя команды из вкладки `Tier` можно поменять структуру разметки на ту, которая хороша для документации языка. Я считаю, что необходимы следующие слои:
+
+* дополнительная разметка
+* звуки
+* номер произнесения
+* слово
+* перевод
+* код спикера
+
+Эта структура представлена на рисунке ниже:
+
+```{r, fig.cap="5. Структура слоёв."}
+knitr::include_graphics(rep("images/05.tier_structure.png"))
+```
+
+
+## Praat скрипты
+
+
+# Введение в R
+
+## Переменные
+
+## Датафрейм
+
+## Считывание файлов в R
+
+## Визуализация данных
