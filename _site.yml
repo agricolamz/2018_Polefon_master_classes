@@ -1,12 +1,12 @@
-name: 'Areal Patterns: Visualisation Tools and Analysis Methods'
+name: '2018 Полифон: Статистические методы в фонетике'
 navbar:
   left:
   - icon: fa-home
     href: index.html
   right:
-  - text: First day
+  - text: Первый день
     href: 1_day.html
-  - text: Second day
+  - text: Второй день
     href: 2_day.html
 output_dir: docs
 output:

@@ -1,12 +1,51 @@
 ---
 title: "1 день"
 author: "[Г. Мороз](mailto:agricolamz@gmail.com) <br> Presentation link:"
+output_df: paged
 editor_options: 
   chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(message = FALSE, warning = FALSE, comment=NA, fig.width=8, fig.height=3.4)
-library(lingtypology)
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, comment=NA, fig.width=8, fig.height=3.4, echo =FALSE)
+library(tidyverse)
+read_csv("/home/agricolamz/work/materials/2018_Abaza_expedition/sound/list.csv") %>% 
+  filter(str_detect(word, "[сзцдт][ыа]$")) ->
+  word_list
 ```
 
+## Данные
+
+* 1 носитль абазинского языка произносил 
+* односложные слова 
+* с открытым слогом, 
+* содержащие гласные **a** или **ə** 
+* в контексте после **зубных** (**t**, **d**, **s**, **z**, **ts**, **dz**)
+* 4 произнесения (3 повторения и carrier phrase)
+```{r}
+word_list %>% 
+  mutate(vowel = if_else(str_detect(word, "ы"), "ы", "а")) %>% 
+  count(vowel) %>% 
+  rename(`гласный` = vowel, количество_слов = n)
+```
+* все данные записаны в июле 2018 г. в ходе экспедиции НИУ ВШЭ
+```{r}
+word_list %>% 
+  arrange(word)
+```
+
+## Praat
+
+### Работа с файлами
+
+### Praat скрипты
+
+## Введение в R
+
+### Переменные
+
+### Датафрейм
+
+### Считывание файлов в R
+
+### Визуализация данных

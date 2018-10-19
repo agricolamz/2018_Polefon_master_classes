@@ -10,8 +10,10 @@ output:
 knitr::opts_chunk$set(message = FALSE, comment=NA)
 ```
 
-Prerequisites:
+* 19.10.2018 11:45--13:15, ауд. 843а, 8-й этаж
+* 20.10.2018 11:10--12:40, ауд. 843а, 8-й этаж
 
+* установите [Praat](http://www.fon.hum.uva.nl/praat/)
 * установите [R](https://cran.r-project.org/)
 * установите [RStudio Desktop](http://www.rstudio.com/download) (это не обязательно, но в RStudio)
-* если не хочется ничего устанавливать, попробуйте [RStudio Cloud](https://rstudio.cloud/), по началу он достаточно медленный, но потом ведет себя как обычный RStudio.
+* если не хочется ничего устанавливать, попробуйте [RStudio Cloud](https://rstudio.cloud/), по началу он достатыочно медленный, но потом ведет себя как обычный RStudio.
