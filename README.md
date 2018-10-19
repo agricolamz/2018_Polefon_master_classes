@@ -1,1 +1,1 @@
-[Materials](https://agricolamz.github.io/2018_Areal_Patterns/) for the course at [HSE / LCL Summer School](https://ling.hse.ru/indling) on Areal Linguistics and the Languages of Russia, 10-14.09.2018 with @macleginn 
+Материалы для мастер классов на конференции Полефон 2018
